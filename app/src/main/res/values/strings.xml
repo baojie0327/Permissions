@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Permission</string>
+    <string name="rationale_camera">此功能需要开启相机权限</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="rationale_location_contacts">需要开始位置和联系人权限</string>
+    <string name="returned_from_app_settings_to_activity">
+       返回应用程序设置以下权限:
+        \n相机: %1$s
+        \n位置和联系人: %1$s
+        \n
+    </string>
+
+    <string name="rationale_ask_again">没有请求权限，此应用程序可能无法正常工作。打开应用程序设置以修改应用程序权限。</string>
+    <string name="title_settings_dialog">权限需求</string>
+</resources>
