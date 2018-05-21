@@ -8,6 +8,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
+import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 
 public class Main2Activity extends BaseActivity implements View.OnClickListener,EasyPermissions.PermissionCallbacks{
@@ -67,6 +68,9 @@ public class Main2Activity extends BaseActivity implements View.OnClickListener,
     @Override
     public void onPermissionsDenied(int requestCode, List<String> perms) {
         Toast.makeText(Main2Activity.this, "拒绝了权限:" + requestCode, Toast.LENGTH_SHORT).show();
+        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
+            new AppSettingsDialog.Builder(this).build().show();
+        }
     }
 
 }
